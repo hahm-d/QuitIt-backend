@@ -3,6 +3,11 @@ class QuestionsController < ApplicationController
         question = Question.create(question_params)
     end
 
+    def index
+        questions = Question.all
+        render json: questions
+    end
+
     private
     
     def question_params
