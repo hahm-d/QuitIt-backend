@@ -16,7 +16,31 @@ questions = [
         statement: "What is 1 + 1",
         answer: "2",
         choices: ["1","2","3","4"]
-    }
+    },
+    {
+        quiz_id: 5,
+        statement: "What is 5 + 10",
+        answer: "15",
+        choices: ["15","12","20","16"]
+    },
+    {
+        quiz_id: 5,
+        statement: "What is 5 * 10",
+        answer: "50",
+        choices: ["20","30","40","50"]
+    },
+    {
+        quiz_id: 5,
+        statement: "What is 20 / 4",
+        answer: "5",
+        choices: ["7","5","10","6"]
+    },
+    {
+        quiz_id: 5,
+        statement: "What is your professor's name",
+        answer: "Duke",
+        choices: ["Steven","James","Duke","Kevin"]
+    }    
 ]
 
 # quizzes.each do |quiz|
