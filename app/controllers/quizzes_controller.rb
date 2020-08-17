@@ -14,8 +14,8 @@ class QuizzesController < ApplicationController
 
     def create
         quiz = Quiz.create(quiz_params)
-        quizzes = Quiz.all
-        render json: quizzes, include:[:questions]
+        #quizzes = Quiz.all
+        #render json: quizzes, include:[:questions]
     end
 
     private
