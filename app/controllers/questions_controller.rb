@@ -6,6 +6,6 @@ class QuestionsController < ApplicationController
     private
     
     def question_params
-        params.require(:questions).permit(:statement, :answer, :wrong_answers, :quiz_id)
+        params.require(:questions).permit(:statement, :answer, :choices, :quiz_id)
     end
 end
