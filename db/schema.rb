@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_193112) do
+ActiveRecord::Schema.define(version: 2020_08_18_144831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,9 +40,11 @@ ActiveRecord::Schema.define(version: 2020_08_17_193112) do
     t.integer "quiz_id"
     t.string "statement"
     t.string "answer"
-    t.string "choices", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "incorrect1"
+    t.string "incorrect2"
+    t.string "incorrect3"
   end
 
   create_table "quizzes", force: :cascade do |t|
