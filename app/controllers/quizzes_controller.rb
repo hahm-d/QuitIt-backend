@@ -9,7 +9,7 @@ class QuizzesController < ApplicationController
     def show
         quiz = Quiz.find_by(unique_code: params[:unique_code])
         
-        render json: quiz.to_json(include: { questions: { include: :image } })
+        render json: quiz, include:[:questions]
     end
 
     def create
