@@ -1,5 +1,5 @@
 Question.delete_all
-#Quiz.delete_all
+Quiz.delete_all
 
 
 
