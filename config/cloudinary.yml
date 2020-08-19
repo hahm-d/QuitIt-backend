@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: duskukulx
+  api_key: '428979581256937'
+  api_secret: VYURlLu9MjnjyFKYs28R7Ncd8F0
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: duskukulx
+  api_key: '428979581256937'
+  api_secret: VYURlLu9MjnjyFKYs28R7Ncd8F0
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: duskukulx
+  api_key: '428979581256937'
+  api_secret: VYURlLu9MjnjyFKYs28R7Ncd8F0
+  enhance_image_tag: true
+  static_file_support: false
