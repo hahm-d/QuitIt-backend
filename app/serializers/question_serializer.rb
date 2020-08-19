@@ -14,19 +14,21 @@ class QuestionSerializer < ActiveModel::Serializer
     serialized_new_question.to_json()
   end
 
+  def serialize_existing_question()
+    serialized_new_question = serialize_question(@question)
+  end
+
   private def serialize_question(question)
     {
-      question: {
-        id: question.id,
-        quiz_id: question.quiz_id,
-        image: question.get_image_url(),
-        statement: question.statement,
-        answer: question.answer,
-        incorrect1: question.incorrect1,
-        incorrect2: question.incorrect2,
-        incorrect3: question.incorrect3,        
-        created_at: question.created_at
-      }
+      id: question.id,
+      quiz_id: question.quiz_id,
+      image: question.get_image_url(),
+      statement: question.statement,
+      answer: question.answer,
+      incorrect1: question.incorrect1,
+      incorrect2: question.incorrect2,
+      incorrect3: question.incorrect3,        
+      created_at: question.created_at
     }
   end
 
