@@ -17,10 +17,10 @@ class QuestionSerializer < ActiveModel::Serializer
   def serialize_existing_question()
     serialized_new_question = serialize_question(@question)
   end
-
+  
   private def serialize_question(question)
-    {
-      id: question.id,
+    if question.image.attached?
+      { id: question.id,
       quiz_id: question.quiz_id,
       image: question.get_image_url(),
       statement: question.statement,
@@ -28,8 +28,16 @@ class QuestionSerializer < ActiveModel::Serializer
       incorrect1: question.incorrect1,
       incorrect2: question.incorrect2,
       incorrect3: question.incorrect3,        
-      created_at: question.created_at
-    }
+      created_at: question.created_at }
+    else
+     { id: question.id,
+      quiz_id: question.quiz_id,
+      statement: question.statement,
+      answer: question.answer,
+      incorrect1: question.incorrect1,
+      incorrect2: question.incorrect2,
+      incorrect3: question.incorrect3,        
+      created_at: question.created_at }
+    end
   end
-
 end
