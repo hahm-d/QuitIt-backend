@@ -75,6 +75,10 @@ GEM
     crass (1.0.6)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.9.0)
     faker (2.13.0)
       i18n (>= 1.6, < 2)
@@ -184,6 +188,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   cloudinary
+  dotenv-rails
   faker
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
